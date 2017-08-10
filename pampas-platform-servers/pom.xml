@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pampas-platform</artifactId>
+        <groupId>com.ipampas</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>pampas-platform-servers</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>pampas-admin-server</module>
+        <module>pampas-config-server</module>
+        <module>pampas-gateway-server</module>
+        <module>pampas-registry-server</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ipampas</groupId>
+                <artifactId>pampas-platform-bom</artifactId>
+                <version>${pampas-platform.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
