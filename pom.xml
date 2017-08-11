@@ -14,6 +14,7 @@
         <module>pampas-platform-build</module>
         <module>pampas-platform-servers</module>
         <module>pampas-platform-starters</module>
+        <module>pampas-platform-banner</module>
     </modules>
 
     <developers>

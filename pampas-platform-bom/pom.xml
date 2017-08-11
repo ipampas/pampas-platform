@@ -33,7 +33,13 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Platform Starters -->
+            <!-- Pampas Platform -->
+            <dependency>
+                <groupId>com.ipampas</groupId>
+                <artifactId>pampas-platform-banner</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.ipampas.spring.boot</groupId>
                 <artifactId>swagger2-spring-boot-starter</artifactId>
