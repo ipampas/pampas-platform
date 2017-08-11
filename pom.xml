@@ -11,9 +11,9 @@
 
     <modules>
         <module>pampas-platform-bom</module>
+        <module>pampas-platform-build</module>
         <module>pampas-platform-servers</module>
         <module>pampas-platform-starters</module>
-        <module>pampas-platform-buildtools</module>
     </modules>
 
     <developers>
