@@ -22,7 +22,7 @@ public class SpringFoxProperties {
             "Apache 2.0",
             "http://www.apache.org/licenses/LICENSE-2.0",
             "Gavin Hu",
-            "https://github.com/ipampas/platform",
+            "https://github.com/ipampas/pampas-platform",
             "huhz1986@gmail.com"
     );
 
