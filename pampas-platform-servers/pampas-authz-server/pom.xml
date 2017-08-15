@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ipampas</groupId>
-    <artifactId>pampas-config-server</artifactId>
+    <artifactId>pampas-authz-server</artifactId>
 
     <name>${project.parent.artifactId} :: ${project.artifactId}</name>
 
@@ -24,12 +23,16 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
     </dependencies>
 
@@ -51,7 +54,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.ipampas.config.server.Application</mainClass>
+                    <mainClass>com.ipampas.authz.server.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

@@ -1,0 +1,35 @@
+server:
+  port: 9999
+  contextPath: /authz
+
+spring:
+  application:
+    name: pampas-authz-server
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 30
+  client:
+    registryFetchIntervalSeconds: 30
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+
+management:
+  security:
+    enabled: false
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+security:
+  user:
+    password: password
+  oauth2:
+    client:
+      client-id: demo
+      client-secret: demo
+      scope: read, write
+      auto-approve-scopes: .*
+    authorization:
+      check-token-access: permitAll()

@@ -14,9 +14,12 @@
 
     <modules>
         <module>pampas-admin-server</module>
+        <module>pampas-authz-server</module>
         <module>pampas-config-server</module>
         <module>pampas-gateway-server</module>
         <module>pampas-registry-server</module>
+        <module>pampas-resource-server</module>
+        <module>pampas-ui-server</module>
     </modules>
 
     <dependencyManagement>
