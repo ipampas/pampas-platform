@@ -9,6 +9,12 @@ spring:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 30
+    homePageUrlPath: ${server.contextPath}
+    statusPageUrlPath: ${server.contextPath}/info
+    healthCheckUrlPath: ${server.contextPath}/health
+    metadataMap:
+      management.context-path: ${server.contextPath}
+      management.port: ${server.port}
   client:
     registryFetchIntervalSeconds: 30
     serviceUrl:
@@ -23,6 +29,7 @@ logging:
     org.springframework.security: DEBUG
 
 security:
+
   user:
     password: password
   oauth2:
