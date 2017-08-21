@@ -29,7 +29,6 @@ logging:
     org.springframework.security: DEBUG
 
 security:
-
   user:
     password: password
   oauth2:
