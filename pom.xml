@@ -15,6 +15,7 @@
         <module>pampas-platform-servers</module>
         <module>pampas-platform-starters</module>
         <module>pampas-platform-banner</module>
+        <module>pampas-platform-dist</module>
     </modules>
 
     <developers>
@@ -38,6 +39,7 @@
         <maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
         <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
         <versions-maven-plugin.version>2.4</versions-maven-plugin.version>
+        <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
         <lombok-maven-plugin.version>1.16.18.0</lombok-maven-plugin.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -122,6 +124,11 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
                     <version>${versions-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven-assembly-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.projectlombok</groupId>

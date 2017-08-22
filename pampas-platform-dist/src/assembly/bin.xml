@@ -1,0 +1,45 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>bin</id>
+    <formats>
+        <format>dir</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <moduleSets>
+        <moduleSet>
+
+            <!-- Enable access to all projects in the current multimodule build! -->
+            <useAllReactorProjects>true</useAllReactorProjects>
+
+            <!-- Now, select which projects to include in this module-set. -->
+            <includes>
+                <include>com.ipampas:pampas-admin-server</include>
+                <include>com.ipampas:pampas-authz-server</include>
+                <include>com.ipampas:pampas-config-server</include>
+                <include>com.ipampas:pampas-deploy-server</include>
+                <include>com.ipampas:pampas-gateway-server</include>
+                <include>com.ipampas:pampas-registry-server</include>
+                <include>com.ipampas:pampas-resource-server</include>
+                <include>com.ipampas:pampas-ui-server</include>
+            </includes>
+
+            <binaries>
+                <includes>
+                    <include>com.ipampas:pampas-admin-server</include>
+                    <include>com.ipampas:pampas-authz-server</include>
+                    <include>com.ipampas:pampas-config-server</include>
+                    <include>com.ipampas:pampas-deploy-server</include>
+                    <include>com.ipampas:pampas-gateway-server</include>
+                    <include>com.ipampas:pampas-registry-server</include>
+                    <include>com.ipampas:pampas-resource-server</include>
+                    <include>com.ipampas:pampas-ui-server</include>
+                </includes>
+                <outputDirectory>pampas-platform-servers</outputDirectory>
+                <unpack>false</unpack>
+            </binaries>
+        </moduleSet>
+    </moduleSets>
+
+</assembly>
