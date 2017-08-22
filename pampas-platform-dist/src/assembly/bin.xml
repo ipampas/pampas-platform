@@ -15,26 +15,12 @@
 
             <!-- Now, select which projects to include in this module-set. -->
             <includes>
-                <include>com.ipampas:pampas-admin-server</include>
-                <include>com.ipampas:pampas-authz-server</include>
-                <include>com.ipampas:pampas-config-server</include>
-                <include>com.ipampas:pampas-deploy-server</include>
-                <include>com.ipampas:pampas-gateway-server</include>
-                <include>com.ipampas:pampas-registry-server</include>
-                <include>com.ipampas:pampas-resource-server</include>
-                <include>com.ipampas:pampas-ui-server</include>
+                <include>com.ipampas:pampas-*-server</include>
             </includes>
 
             <binaries>
                 <includes>
-                    <include>com.ipampas:pampas-admin-server</include>
-                    <include>com.ipampas:pampas-authz-server</include>
-                    <include>com.ipampas:pampas-config-server</include>
-                    <include>com.ipampas:pampas-deploy-server</include>
-                    <include>com.ipampas:pampas-gateway-server</include>
-                    <include>com.ipampas:pampas-registry-server</include>
-                    <include>com.ipampas:pampas-resource-server</include>
-                    <include>com.ipampas:pampas-ui-server</include>
+                    <include>com.ipampas:pampas-*-server</include>
                 </includes>
                 <outputDirectory>pampas-platform-servers</outputDirectory>
                 <unpack>false</unpack>
