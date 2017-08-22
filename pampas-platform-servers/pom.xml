@@ -21,6 +21,7 @@
         <module>pampas-registry-server</module>
         <module>pampas-resource-server</module>
         <module>pampas-ui-server</module>
+        <module>pampas-trace-server</module>
     </modules>
 
     <dependencyManagement>
