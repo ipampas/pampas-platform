@@ -28,6 +28,7 @@
                             <descriptors>
                                 <descriptor>src/assembly/bin.xml</descriptor>
                             </descriptors>
+                            <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
                 </executions>
