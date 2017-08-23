@@ -6,6 +6,9 @@ spring:
     name: pampas-ui-server
   jackson:
     date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+  zipkin:
+    server.name: pampas-trace-server
+    locator.discovery.enabled: true
 
 eureka:
   instance:

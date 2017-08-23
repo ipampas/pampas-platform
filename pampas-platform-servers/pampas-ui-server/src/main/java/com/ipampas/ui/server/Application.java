@@ -6,8 +6,9 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoRestTemplateFactory;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.security.oauth2.client.feign.OAuth2FeignRequestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpRequest;
@@ -18,17 +19,15 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.rmi.server.RemoteServer;
 import java.util.Arrays;
 
 @EnableOAuth2Sso
-//@EnableResourceServer
+@EnableFeignClients
 @SpringCloudApplication
 public class Application {
 
@@ -76,9 +75,15 @@ public class Application {
     }
 
     @Bean
-    RestOperations restOperations(OAuth2ProtectedResourceDetails details,
+    static OAuth2FeignRequestInterceptor oAuth2FeignRequestInterceptor(OAuth2ProtectedResourceDetails resource,
+                                                                       OAuth2ClientContext oAuth2ClientContext) {
+        return new OAuth2FeignRequestInterceptor(oAuth2ClientContext, resource);
+    }
+
+    @Bean
+    RestOperations restOperations(OAuth2ProtectedResourceDetails resource,
                                   OAuth2ClientContext oauth2ClientContext) {
-        return new OAuth2RestTemplate(details, oauth2ClientContext);
+        return new OAuth2RestTemplate(resource, oauth2ClientContext);
     }
 
 }
