@@ -1,0 +1,19 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: pampas-deploy-server
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 30
+  client:
+    registryFetchIntervalSeconds: 30
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+
+management:
+  security:
+    enabled: false
+

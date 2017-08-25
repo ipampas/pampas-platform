@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: pampas-registry-server
+
+eureka:
+  datacenter: default
+  environment: test
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+management:
+  security:
+    enabled: false
