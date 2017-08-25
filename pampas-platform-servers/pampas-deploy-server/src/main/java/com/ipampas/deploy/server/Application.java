@@ -1,4 +1,4 @@
-package com.ipampas.deploy.server;
+ package com.ipampas.deploy.server;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -47,15 +47,6 @@ public class Application {
                 //
                 String deployId = appDeployer.deploy(appDeploymentRequest);
                 //
-                for (int i=0; i<1000; i++) {
-                    TimeUnit.SECONDS.sleep(3);
-                    //
-                    AppStatus appStatus = appDeployer.status(deployId);
-                    appStatus.getInstances().values().forEach(appInstanceStatus -> {
-                        //
-                        System.out.printf(appInstanceStatus.getState().name());
-                    });
-                }
             }
         };
     }
